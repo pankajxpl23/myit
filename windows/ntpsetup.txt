@@ -2,7 +2,7 @@ Config NTP on windows server 2008
 
 netdom /query fsmo
 net stop w32time
-w32tm /config /syncfromflags:manual /manualpeerlist:”20.0.0.10,10.0.16.2,0.in.pool.ntp.org”
+w32tm /config /syncfromflags:manual /manualpeerlist:”192.168.1.1,192.168.1.2,0.in.pool.ntp.org”
 
 w32tm /config /reliable:yes
 
@@ -11,6 +11,6 @@ w32tm /query /configuration
 
 w32tm /query /status
 
-w32tm /config /syncfromflags:manual /manualpeerlist:10.0.16.2 /update /reliable:yes
+w32tm /config /syncfromflags:manual /manualpeerlist:192.168.1.1 /update /reliable:yes
 
 I then did a query using:
