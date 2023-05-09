@@ -4,4 +4,11 @@ disk part and list volume
 go to X:\sources\recovery> startrep.exe
 chkdsk C: /f /r to fix errors the disk
 sfc /scannow /offbootdir=c:\ /offwindir=c:\windows
+sfc /offbootdir is to specify the location of the offline boot directory.
+Run sfc /offwindir is to specify the location of the offline windows directory.
+(If the sfc /scannow is not working, you can still use DISM command line.  Type as: DISM /image:D:\ /cleanup-image /revertpendingactions. (D: is the drive letter of your system drive. ))
 
+    Bootrec /fixmbr
+    Bootrec /fixboot
+     bootrec/scanos
+    bootrec/rebuildbcd
