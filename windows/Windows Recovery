@@ -1,1 +1,7 @@
+Insert ISo and boot
+Select recovery command prompt
+disk part and list volume
+go to X:\sources\recovery> startrep.exe
+chkdsk C: /f /r to fix errors the disk
+sfc /scannow /offbootdir=c:\ /offwindir=c:\windows
 
